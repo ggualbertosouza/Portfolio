@@ -37,7 +37,7 @@ export default function Root() {
       </aside>
       <div className="flex flex-col w-full">
         <Header />
-        <main className="flex-1 p-4">
+        <main className="flex-1">
           <Outlet />
         </main>
         <Footer />

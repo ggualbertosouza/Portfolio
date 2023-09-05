@@ -11,7 +11,7 @@ export default function ContAside(){
         <div>
             <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="flex gap-2 items-center text-primary pl-2 sm">
+            className="flex gap-2 items-center text-primary pl-2">
                 {isOpen ? <BiRightArrow /> : <BiDownArrow />}
                 contacts
                 </button>
