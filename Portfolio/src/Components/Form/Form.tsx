@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import { z } from "zod";
 
 // React hook forms Packages
-import { useForm, useFormState } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect } from "react";
 
@@ -26,25 +26,32 @@ export default function Form() {
     register,
     handleSubmit,
     reset,
-    formState,
-    formState: { errors, isSubmitSuccessful },
+    formState: { errors },
   } = useForm<formProps>({
     mode: "onBlur",
-    resolver: zodResolver(schema),
-    defaultValues: { name: "", email: "", body: "" },
+    resolver: zodResolver(schema)
   });
 
-  useEffect(() => {
-    if (formState.isSubmitSuccessful) {
-      reset(defaultValues);
-    }
-  }, [formState,  reset]);
+  const sendEmail = (formData) => {
+    const templateParams = {
+      from_name: formData.name,
+      message: formData.body,
+      email: formData.email,
+    };
+    emailjs
+      .send(
+        "service_vvpri2o",
+        "template_78g9wbb",
+        templateParams,
+        "gH9LUCHOxnCrPkdSg"
+      )
+      .then((result) => console.log(result))
+      .catch((err) => console.log(err));
+    reset();
+  };
   return (
     <>
-      <form
-        onSubmit={handleSubmit(handleForm)}
-        className="flex flex-col gap-2 "
-      >
+      <form onSubmit={handleSubmit(sendEmail)} className="flex flex-col gap-2 ">
         <label htmlFor="name">_name:</label>
         <input
           placeholder="name"
