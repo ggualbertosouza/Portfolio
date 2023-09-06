@@ -1,17 +1,22 @@
+// EmailJS Packages
+import emailjs from "@emailjs/browser";
+
 // Zod Packages
 import { z } from "zod";
 
 // React hook forms Packages
-import { useForm } from "react-hook-form";
-import { resolver, zodResolver } from "@hookform/resolvers/zod";
+import { useForm, useFormState } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useEffect } from "react";
 
 // Zod validation
 const schema = z.object({
   name: z.string().min(1, "Digite seu nome."),
   email: z.string().email("Digite um e-mail válido."),
-  message: z
+  body: z
     .string()
-    .min(10, "Sua messagem precisar ter no mínimo 10 caracteres."),
+    .min(10, "Sua messagem precisar ter no mínimo 10 caracteres.")
+    .max(255, "Máximo de caracteres suportados é de 255."),
 });
 
 type formProps = z.infer<typeof schema>;
@@ -20,15 +25,20 @@ export default function Form() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState,
+    formState: { errors, isSubmitSuccessful },
   } = useForm<formProps>({
     mode: "onBlur",
     resolver: zodResolver(schema),
+    defaultValues: { name: "", email: "", body: "" },
   });
 
-  const handleForm = (data) => {
-    console.log(data);
-  };
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset(defaultValues);
+    }
+  }, [formState,  reset]);
   return (
     <>
       <form
@@ -58,15 +68,15 @@ export default function Form() {
           <p className="text-sm text-orange">{errors.email.message}</p>
         )}
 
-        <label htmlFor="message">_message</label>
-        <input
+        <label htmlFor="body">_body</label>
+        <textarea
           placeholder="Enter your message"
-          type="text"
-          {...register("message")}
-          className="p-1 rounded bg-[#011221] border border-secondary shadow-sm shadow-secondary"
+          maxLength={255}
+          {...register("body")}
+          className="h-24 p-1 rounded bg-[#011221] border border-secondary shadow-sm shadow-secondary"
         />
-        {errors.message && (
-          <p className="text-sm text-orange">{errors.message.message}</p>
+        {errors.body && (
+          <p className="text-sm text-orange">{errors.body.message}</p>
         )}
 
         <button
