@@ -1,16 +1,21 @@
 
+type infoProps = {
+  name?: string,
+  email?: string,
+  date?: string,
+}
 
-export default function ContactCode() {
+export default function ContactCode({name, email, date}:infoProps) {
   return (
     <div>
-        <pre className="text-sm border border-secondary bg-[#011221] p-4 rounded">
+        <pre className="text-sm border border-secondary bg-[#011221] p-4 rounded text-start">
             {`
 const button = document.querySelector('#sendBtn')  
 const message = {
-name: '', 
-email: '', 
+name: '`}{<span className="text-green">{name}</span>}{`', 
+email: '`}{<span className="text-purple">{email}</span>}{`', 
 message: '', 
-date: '',
+date: '`}{<span className="text-orange">{date}</span>}{`',
     }
 button.addEventListener('click', () => {
 form.send(message); 

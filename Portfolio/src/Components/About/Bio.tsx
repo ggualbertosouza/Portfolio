@@ -1,18 +1,29 @@
-export default function Bio(){
-    return(
-        <div className="flex item-center justify-center h-full text-sm">
-            <div className="lg:border-r border-r-secondary border-b border-b-secondary lg:border-b-0 flex items-center text-center lg:w-[50%]">
-            <big>
-                Português<br/>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ab officia provident atque animi quos possimus impedit reiciendis repellat repellendus? Ratione aut possimus accusamus eaque nam amet veniam, dicta sapiente?
-            </big>
-            </div>
-            <div className="flex items-center text-center lg:w-[50%]">
-            <big>
-                Inglês<br/>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ab officia provident atque animi quos possimus impedit reiciendis repellat repellendus? Ratione aut possimus accusamus eaque nam amet veniam, dicta sapiente?
-            </big>
-            </div>
+import ContactCode from "../Codes/ContactCode";
+import TypeWriter from "./TypeWriter";
+
+export default function Bio() {
+  return (
+    <div className="py-10 px-4 space-y-10 h-full">
+      <div>
+        <TypeWriter />
+      </div>
+      <div className="flex h-full items-center justify-center text-center gap-6 ">
+        <div className="self-start space-y-5">
+          <h2 className="text-xl">Quem sou eu?</h2>
+          <p className="text-md">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+            saepe rerum ad, nulla, aut rem impedit tempora ducimus, quisquam
+            nemo esse odit corrupti veniam ipsa ea sint quidem doloribus quae.
+          </p>
         </div>
-    )
+        <div className="">
+        <ContactCode
+          name="Guilherme Gualberto Souza"
+          email="contatoguilhermegsz@gmail.com"
+          date="01/08/2000"
+        />
+        </div>
+      </div>
+    </div>
+  );
 }

@@ -11,6 +11,7 @@ import Projects from './Pages/Projects.tsx'
 import ContactSuccess from './Pages/ContactSuccess.tsx'
 import Interests from './Components/About/Interests.tsx'
 import Educational from './Components/About/Educational.tsx'
+import Hello from './Pages/Hello.tsx'
 
 
 const routes = createBrowserRouter([
@@ -18,9 +19,9 @@ const routes = createBrowserRouter([
     path: '/',
     element: <App />,
     children: [
-      {path: '/', element: <App />},
+      {path: '/', element: <Hello />},
       {path: '/about', element: <About />},
-      {path: '/about/interest', element: <Interests />},
+      {path: '/about/interests', element: <Interests />},
       {path: '/about/educational', element: <Educational />},
       {path: '/contact', element: <Contact />},
       {path: '/contact/success', element: <ContactSuccess />}, 

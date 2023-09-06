@@ -15,28 +15,32 @@ export default function Root() {
   const [sideBar, setSideBar] = useState<boolean>(false);
 
   return (
-    <div className="min-h-screen w-full bg-background font-fira text-secondary flex">
+    <div className="min-h-screen max-w-full bg-background font-fira text-secondary flex">
       <aside
         className={`${
-          sideBar ? "md:w-[25%]" : "md:w-[5%]"
-        } lg:w-[25%] flex flex-col gap-2  duration-700 border-r border-r-secondary `}
+          sideBar ? "sm:w-[100%]" : "md:w-[5%]"
+        } lg:w-[20%] flex flex-col gap-2  duration-700 border-r border-r-secondary relative`}
       >
         <a
           href="/"
-          className="text-xl text-center p-2 w-full border-b border-b-secondary hover:border-b hover:border-b-orange"
+          className="block text-xl text-center p-2 w-full border-b border-b-secondary hover:border-b hover:border-b-orange"
         >
-        Guilhermegsz
-        </a>
+          {sideBar ? "Guilhermegsz" : "G"}
+          </a>
         <button
-          className="lg:hidden block"
+          className="lg:hidden block text-xl absolute right-2 top-14"
           onClick={() => setSideBar(!sideBar)}
         >
           {sideBar ? <AiOutlineClose /> : <AiOutlineMenu />}
         </button>
-        <Aside />
+        <nav className={`${sideBar ? "block" : "sm:hidden lg:block"} absolute top-20 w-full`}>
+          <Aside />
+        </nav>
       </aside>
-      <div className="flex flex-col w-full">
+      <div className={`flex flex-col w-full ${sideBar ? "hidden" : ''}`}>
+        <div className="lg:block sm:hidden">
         <Header />
+        </div>
         <main className="flex-1">
           <Outlet />
         </main>
