@@ -3,13 +3,12 @@ import Form from "../Components/Form/Form";
 
 export default function Contact() {
   return (
-    <div
-    className="lg:flex gap-2 h-full "
-    >
-      <div className="lg:w-[50%] lg:border-r lg:border-r-secondary  p-8 pt-24">
+    <div className="lg:flex gap-2 min-h-full max-w-full">
+      <div className="lg:w-[50%] lg:border-r lg:border-r-secondary py-12 flex items-center justify-center">
       <Form/>
       </div>
-      <div className="lg:w-[50%] p-8 pt-24">
+
+      <div className="lg:w-[50%] border-t border-t-secondary lg:border-0 py-12 flex items-center justify-center">
       <ContactCode/>
       </div>
     </div>

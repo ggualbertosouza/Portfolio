@@ -7,7 +7,9 @@ import { z } from "zod";
 // React hook forms Packages
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useEffect } from "react";
+
+// React Router Dom Package
+import { redirect, useNavigate } from "react-router-dom";
 
 // Zod validation
 const schema = z.object({
@@ -20,7 +22,6 @@ const schema = z.object({
 });
 
 type formProps = z.infer<typeof schema>;
-
 export default function Form() {
   const {
     register,
@@ -29,8 +30,10 @@ export default function Form() {
     formState: { errors },
   } = useForm<formProps>({
     mode: "onBlur",
-    resolver: zodResolver(schema)
+    resolver: zodResolver(schema),
   });
+
+  const navigate = useNavigate();
 
   const sendEmail = (formData) => {
     const templateParams = {
@@ -45,9 +48,10 @@ export default function Form() {
         templateParams,
         "gH9LUCHOxnCrPkdSg"
       )
-      .then((result) => console.log(result))
+      .then((response) => { console.log(response)})
       .catch((err) => console.log(err));
-    reset();
+      reset();
+      navigate('/contact/success')
   };
   return (
     <>
@@ -88,7 +92,7 @@ export default function Form() {
 
         <button
           type="submit"
-          className="bg-[#1C2B3A] text-primary rounded p-1 w-24"
+          className="bg-[#1C2B3A] text-primary rounded p-1 w-24 border border-[#1C2B3A] hover:bg-background hover:border-[#1C2B3A]"
         >
           Send
         </button>

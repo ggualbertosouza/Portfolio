@@ -8,6 +8,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import About from './Pages/About.tsx'
 import Contact from './Pages/Contact.tsx'
 import Projects from './Pages/Projects.tsx'
+import ContactSuccess from './Pages/ContactSuccess.tsx'
+import Interests from './Components/About/Interests.tsx'
+import Educational from './Components/About/Educational.tsx'
 
 
 const routes = createBrowserRouter([
@@ -17,7 +20,10 @@ const routes = createBrowserRouter([
     children: [
       {path: '/', element: <App />},
       {path: '/about', element: <About />},
+      {path: '/about/interest', element: <Interests />},
+      {path: '/about/educational', element: <Educational />},
       {path: '/contact', element: <Contact />},
+      {path: '/contact/success', element: <ContactSuccess />}, 
       {path: '/projects', element: <Projects />}
     ]
   }
