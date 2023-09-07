@@ -7,7 +7,7 @@ export default function Bio() {
       <div>
         <TypeWriter />
       </div>
-      <div className="flex h-full items-center justify-center text-center gap-6 ">
+      <div className="lg:flex h-full items-center justify-center text-center gap-6">
         <div className="self-start space-y-5">
           <h2 className="text-xl">Quem sou eu?</h2>
           <p className="text-md">
@@ -16,7 +16,7 @@ export default function Bio() {
             nemo esse odit corrupti veniam ipsa ea sint quidem doloribus quae.
           </p>
         </div>
-        <div className="">
+        <div className="lg:mt-0 sm:mt-5x">
         <ContactCode
           name="Guilherme Gualberto Souza"
           email="contatoguilhermegsz@gmail.com"

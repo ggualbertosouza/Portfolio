@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import Aside from "../Components/Aside/Aside";
 import Footer from "../Components/Footer/Footer";
 import Header from "../Components/Header/Header";
-import Main from "../Components/Main/Main";
 
 // React Packages
 import { useState } from "react";
@@ -18,14 +17,14 @@ export default function Root() {
     <div className="min-h-screen max-w-full bg-background font-fira text-secondary flex">
       <aside
         className={`${
-          sideBar ? "sm:w-[100%]" : "md:w-[5%]"
+          sideBar ? "sm:w-[60%]" : "md:w-[5%]"
         } lg:w-[20%] flex flex-col gap-2  duration-700 border-r border-r-secondary relative`}
       >
         <a
           href="/"
-          className="block text-xl text-center p-2 w-full border-b border-b-secondary hover:border-b hover:border-b-orange"
+          className="block overflow-hidden text-xl text-center py-2 px-0.5 w-full border-b border-b-secondary hover:border-b hover:border-b-orange"
         >
-          {sideBar ? "Guilhermegsz" : "G"}
+          {sideBar ? "Guilhermegsz" : "Guilhermegsz"}
           </a>
         <button
           className="lg:hidden block text-xl absolute right-2 top-14"

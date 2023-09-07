@@ -6,6 +6,7 @@ export default {
   theme: {
     colors:{
       'background': '#011627',
+      'second-background': '#011221',
       'purple': '#4D5BCE',
       'orange': '#E99287',
       'green': '#43D9AD',
