@@ -7,16 +7,15 @@ export default function Bio() {
       <div>
         <TypeWriter />
       </div>
-      <div className="lg:flex h-full items-center justify-center text-center gap-6">
+      <div className="xl:flex h-full items-start justify-center text-center gap-6 px-6">
         <div className="self-start space-y-5">
           <h2 className="text-xl">Quem sou eu?</h2>
-          <p className="text-md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            saepe rerum ad, nulla, aut rem impedit tempora ducimus, quisquam
-            nemo esse odit corrupti veniam ipsa ea sint quidem doloribus quae.
-          </p>
+          <p className="text-md text-start">
+            Sou Guilherme Gualberto Souza, tenho 23 anos, Mineiro UAI.<br />
+            <br /> Busco crescer profissionalmente dentro da área da tecnologia, por ser uma paixão desde criança. Possuo força de vontade, coragem e capacidade de aprendizagem necessária para alcançar esse sonho, almejo alcançar o cargo de Desenvolvedor Full-Stack Sênior. Acredito que a realização só depende de mim, por isso, estou disposto a ser minha melhor versão, no âmbito pessoal e profissional, todos os dias.
+            </p>
         </div>
-        <div className="lg:mt-0 sm:mt-5x">
+        <div className="xl:mt-0 sm:mt-12">
         <ContactCode
           name="Guilherme Gualberto Souza"
           email="contatoguilhermegsz@gmail.com"

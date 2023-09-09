@@ -25,20 +25,24 @@ export default function Root() {
           className="block overflow-hidden text-xl text-center py-2 px-0.5 w-full border-b border-b-secondary hover:border-b hover:border-b-orange"
         >
           {sideBar ? "Guilhermegsz" : "Guilhermegsz"}
-          </a>
+        </a>
         <button
           className="lg:hidden block text-xl absolute right-2 top-14"
           onClick={() => setSideBar(!sideBar)}
         >
           {sideBar ? <AiOutlineClose /> : <AiOutlineMenu />}
         </button>
-        <nav className={`${sideBar ? "block" : "sm:hidden lg:block"} absolute top-20 w-full`}>
+        <nav
+          className={`${
+            sideBar ? "block" : "sm:hidden lg:block"
+          } absolute top-20 w-full`}
+        >
           <Aside />
         </nav>
       </aside>
-      <div className={`flex flex-col w-full ${sideBar ? "hidden" : ''}`}>
+      <div className={`flex flex-col w-full ${sideBar ? "hidden" : ""}`}>
         <div className="lg:block sm:hidden">
-        <Header />
+          <Header />
         </div>
         <main className="flex-1">
           <Outlet />

@@ -1,7 +1,9 @@
+import Home from "../Components/Home/Home";
+
 export default function Hello(){
     return(
         <>
-        <h1>Hello Page</h1>
+        <Home />
         </>
     )
 }
