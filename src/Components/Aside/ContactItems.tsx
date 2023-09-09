@@ -13,7 +13,7 @@ type ContactProps = {
 
 export default function Contactitems({name, color, icon, contact}: ContactProps){
     return(
-        <div className="relative w-full">
+        <div className="relative w-full overflow-hidden">
             <motion.button 
             whileHover={{x: 1, y: -1}}
             className="flex items-center gap-2 group px-1">

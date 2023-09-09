@@ -31,7 +31,7 @@ export default function ProfileInfo() {
       <motion.button
         whileHover={{translateX: 3}}
         onClick={() => setIsOpen()}
-        className={`flex items-center gap-2`}
+        className={`flex items-center gap-2 overflow-hidden`}
       >
         {isOpen ? <BiSolidRightArrow /> : <BiDownArrow />}
         profile-info
@@ -39,7 +39,7 @@ export default function ProfileInfo() {
       <motion.div
         variants={variants}
         animate={!isOpen ? 'open' : 'closed'}
-        className={` ${isOpen ? 'hidden' : 'visible'} space-y-2 py-2 pl-6`}
+        className={` ${isOpen ? 'hidden' : 'visible'} space-y-2 py-2 pl-6 `}
       >
         <ProfileItems
           name="bio"

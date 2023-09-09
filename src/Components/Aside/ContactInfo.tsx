@@ -36,7 +36,7 @@ export default function ContactInfo() {
       <motion.button
         whileHover={{ translateX: 3 }}
         onClick={() => setIsOpen()}
-        className="flex items-center gap-2"
+        className="flex items-center gap-2 overflow-hidden"
       >
         {isOpen ? <BiSolidRightArrow /> : <BiDownArrow />}
         contacts
