@@ -3,7 +3,7 @@ import Dev from "./Dev";
 export default function Home() {
   return (
     <div className="w-full h-full flex items-center justify-center p-4 md:p-0">
-      <div className="flex flex-col items-start gap-8">
+      <div className="flex flex-col items-start gap-8 ">
         <div className="flex flex-col items-start gap-1 text-primary">
           <small>hi all, im</small>
           <h1 className="text-md md:text-4xl">GuilhermeGSZ</h1>

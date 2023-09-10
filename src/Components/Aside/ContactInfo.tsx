@@ -58,6 +58,13 @@ export default function ContactInfo() {
           icon={<BiPhone />}
           contact="33 98419-5210"
         />
+        <a href="/contact">
+          <Contactitems
+            name="send-me-email"
+            color="text-green"
+            icon={<BiLogoGmail />}
+          />
+        </a>
       </motion.div>
     </>
   );
