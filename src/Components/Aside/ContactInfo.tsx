@@ -1,7 +1,7 @@
 // React icons Packages
 import {
   BiDownArrow,
-  BiSolidRightArrow ,
+  BiSolidRightArrow,
   BiLogoGmail,
   BiPhone,
 } from "react-icons/bi";
@@ -36,7 +36,7 @@ export default function ContactInfo() {
       <motion.button
         whileHover={{ translateX: 3 }}
         onClick={() => setIsOpen()}
-        className="flex items-center gap-2 overflow-hidden"
+        className="flex items-center gap-2"
       >
         {isOpen ? <BiSolidRightArrow /> : <BiDownArrow />}
         contacts

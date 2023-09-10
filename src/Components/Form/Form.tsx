@@ -62,7 +62,7 @@ const sendEmail = ({name, body, email}: FormDataProps) => {
   };
   return (
     <>
-      <form onSubmit={handleSubmit(sendEmail)} className="flex flex-col gap-2 ">
+      <form onSubmit={handleSubmit(sendEmail)} className="flex flex-col gap-2 lg:text-xl">
         <label htmlFor="name">_name:</label>
         <input
           placeholder="name"

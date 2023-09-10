@@ -8,7 +8,7 @@ export default function TypeWriter() {
   });
   return (
     <div className="flex flex-col item-center justify-center h-full text-center">
-      <h2 className="text-2xl purple">
+      <h2 className="text-sm md:text-2xl purple">
         {'> Profile: '}
         <span className="text-green"> {typeEffect}</span>
       </h2>

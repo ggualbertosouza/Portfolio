@@ -6,9 +6,9 @@ export default function Interests() {
       <div className="h-4">
         <TypeWriter />
       </div>
-      <div className="flex flex-col h-full items-start justify-center text-center gap-6 px-12">
+      <div className="flex flex-col h-full items-start justify-center text-center gap-6 px-6">
         <h2 className="text-xl text-green">Interests</h2>
-        <p className="text-start">
+        <p className="text-sm md:text-lg xl:text-2xl text-start">
           Atualmente estou me especializando no front end, mais especificamente em tecnologias como
           TypeScript, React, NextJS, HTML5, Css, Tailwindcss, BootStrap. Também, em como melhorar meu 
           código dentro dessas stacks, estudando Design Patterns, Requisições em API REST e GraphQL,... <br />

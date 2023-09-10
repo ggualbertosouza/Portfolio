@@ -6,15 +6,15 @@ export default function Educational(){
         <div>
         <TypeWriter />
         </div>
-        <div className="flex flex-col h-full items-start justify-center text-center gap-6 px-12">
+        <div className="flex flex-col h-full items-start justify-center text-center gap-6 px-6">
         <h2 className="text-2xl text-green">
            Educational
         </h2>
-        <div className="text-start text-orange">
+        <div className="text-sm md:text-md text-start text-orange py-4">
             <p>// Administração | Estácio | 01/22 - 12/25</p>
             <p>// Sistemas de informação | Estácio | 07/23 - 07/27</p>
         </div>
-        <p className="text-start">
+        <p className="text-sm md:text-md  text-start">
         O curso de Administração desempenha um papel fundamental no desenvolvimento de um programador, mesmo que a relação entre essas áreas possa não ser imediatamente óbvia. Aqui estão algumas maneiras pelas quais o curso de Administração pode ser importante para o crescimento de um programador:<br />        
         
 <br /><strong className="text-primary">Habilidades de Gerenciamento de Projetos:</strong> A Administração ensina habilidades cruciais de gerenciamento de projetos, como planejamento, organização e controle. Essas habilidades são essenciais para programadores que trabalham em projetos de desenvolvimento de software, ajudando-os a cumprir prazos e entregar produtos de alta qualidade.<br />

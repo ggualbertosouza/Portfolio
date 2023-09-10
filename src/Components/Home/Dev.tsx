@@ -10,10 +10,12 @@ export default function Dev() {
     deleteSpeed: 40,
   });
   return (
+    <>
     <div className="flex flex-col item-center justify-center">
-      <h2 className="text-2xl text-purple">
+      <h2 className="text-sm md:text-2xl text-purple">
       {typeEffect} developer
       </h2>
     </div>
+    </>
   );
 }

@@ -21,7 +21,7 @@ export default function ProfileItems({
     <motion.a
       whileHover={{ x: 1, y: -1}}
       href={page}
-      className="flex items-center gap-2 text-primary overflow-hidden"
+      className="flex items-center gap-2 text-primary "
     >
       <i className={`${color}`}>{icon}</i>
       {name}
